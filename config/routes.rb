@@ -1,4 +1,6 @@
 Standout::Application.routes.draw do
+  resources :suppliers
+
   resources :categories
 
   # The priority is based upon order of creation: first created -> highest priority.
