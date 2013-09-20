@@ -1,0 +1,45 @@
+<% content_for :custom_js do %>
+  <%= javascript_include_tag "http://maps.googleapis.com/maps/api/js?key=#{@apikey}&libraries=geometry&sensor=false" %>
+<% end %>
+
+<h1>Listing suppliers</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Address</th>
+      <th>Zip</th>
+      <th>Country</th>
+      <th>Email</th>
+      <th>Phone</th>
+      <th>Category</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @suppliers.each do |supplier| %>
+      <tr>
+        <td><%= supplier.name %></td>
+        <td><%= supplier.address %></td>
+        <td><%= supplier.zip %></td>
+        <td><%= supplier.country %></td>
+        <td><%= supplier.email %></td>
+        <td><%= supplier.phone %></td>
+        <td><%= supplier.category.name %></td>
+        <td><%= link_to 'Show', supplier %></td>
+        <td><%= link_to 'Edit', edit_supplier_path(supplier) %></td>
+        <td><%= link_to 'Destroy', supplier, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Supplier', new_supplier_path %>
+
+<div id="map" />
