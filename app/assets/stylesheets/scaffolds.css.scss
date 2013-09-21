@@ -1,9 +1,35 @@
+@mixin gradient($from, $to, $height) {
+    background-color: $to;
+    
+    background-image: -webkit-gradient(linear, left top, left bottom, from($from), to($to));
+    background-image: -webkit-linear-gradient($from, $to);
+    background-image: -moz-linear-gradient($from, $to);
+    background-image: -o-linear-gradient($from, $to);
+    background-image: -ms-linear-gradient($from, $to);
+    background-image: linear-gradient($from, $to);
+ 
+    background-repeat: repeat-x;
+ 
+    -webkit-background-size: 100% $height;
+    -moz-background-size: 100% $height;
+    -o-background-size: 100% $height;
+    background-size: 100% $height;
+}
+
+@mixin shadow($horiz, $vert, $blur, $spread, $color) {
+  -moz-box-shadow:    $horiz $vert $blur $spread $color;
+  -webkit-box-shadow: $horiz $vert $blur $spread $color;
+  box-shadow:         $horiz $vert $blur $spread $color;
+}
+
 body {
-  background-color: #fff;
+  margin: 0;
+  padding: 0;
   color: #333;
   font-family: verdana, arial, helvetica, sans-serif;
   font-size: 13px;
   line-height: 18px;
+  @include gradient(#135, #58A, 500px);
 }
 
 p, ol, ul, td {
@@ -66,4 +92,35 @@ div {
     font-size: 12px;
     list-style: square;
   }
+}
+
+ 
+#topbanner {
+  width: 100%;
+  background-color: #002;
+  border-bottom: 1px solid #257;
+  margin: 0;
+  padding: 0;
+  height: 40px;
+} 
+
+#milk {
+  background-image: image-url("milk.png");
+  width: 373px;
+  height: 400px;
+  float: left;
+  z-index: -1;
+  position: absolute;
+  top: 50px;
+  left: 0px;
+}
+
+#content {
+  position: absoute;
+  margin: 100px auto;
+  width: 800px;
+  padding: 20px;
+  background-color: #eee;
+  border: 1px solid #334;
+  @include shadow(0, 0, 30px, -5px, #000);
 }

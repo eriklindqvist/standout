@@ -11,3 +11,30 @@
  *= require_self
  *= require_tree .
  */
+ 
+#topbanner ul {
+  list-style-type: none;
+  margin: 0px auto;
+  padding: 10px;
+  width: 600px;
+}
+
+#topbanner li {
+  display: inline;
+}
+
+#topbanner p {
+  float: left;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  margin: 0px 15px;
+  line-height: 40px;
+}
+
+#topbanner a {
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: bold;
+  margin: 0px 40px;
+}

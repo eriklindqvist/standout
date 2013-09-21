@@ -1,15 +1,25 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Arbetsprov till Standout</title>
+  <title>Milk</title>
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= yield :custom_js %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-
-<%= yield %>
-
+  <div id="topbanner">
+    <p>Mjölk</p>
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="/suppliers">Suppliers</a></li>
+      <li><a href="/categories">Categories</a></li>
+      <li><a href="">About</a></li>
+    </ul>
+  </div>  
+  <div id="content">
+  <%= yield %>
+  </div>
+  <div id="milk"></div>
 </body>
 </html>
