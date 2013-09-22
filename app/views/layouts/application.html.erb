@@ -11,10 +11,10 @@
   <div id="topbanner">
     <p>Milk<b>man</b></p>
     <ul>
-      <li><a href="/">Home</a></li>
-      <li><a href="/suppliers">Suppliers</a></li>
-      <li><a href="/categories">Categories</a></li>
-      <li><a href="">About</a></li>
+      <li><%= link_to "Home", "/", :data => {no_turbolink: true} %></li>
+      <li><%= link_to "Suppliers", "/suppliers", :data => {no_turbolink: true} %></li>
+      <li><%= link_to "Categories", "/categories" %></li>
+      <li><%= link_to "About" %></li>
     </ul>
   </div>  
   <div id="content">

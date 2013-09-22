@@ -30,4 +30,8 @@ init = ->
         map.fitBounds bounds
         map.panToBounds bounds
 
-$ -> map = init()
+$(document).on 'page:load', ->
+  if $('map').length > 0
+    Gmaps.loadMaps()
+    
+$ -> init()
