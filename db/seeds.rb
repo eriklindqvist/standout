@@ -6,7 +6,25 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-Category.create [{ name: 'Home' }, { name: 'Food' }, { name: 'Coffee' }, { name: 'Hardware' }]
+Category.create(
+  name: 'Home',
+  icon: 'https://maps.gstatic.com/mapfiles/ms2/micons/blue-dot.png'
+)
+
+Category.create(
+  name: 'Food',
+  icon: 'https://maps.gstatic.com/mapfiles/ms2/micons/green-dot.png'
+)
+
+Category.create(
+  name: 'Coffee',
+  icon: 'https://maps.gstatic.com/mapfiles/ms2/micons/yellow-dot.png'
+)
+
+Category.create(
+  name: 'Hardware',
+  icon: 'https://maps.gstatic.com/mapfiles/ms2/micons/red-dot.png'
+)
 
 Supplier.create(
   name: 'Standout AB',
