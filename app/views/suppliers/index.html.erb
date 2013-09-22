@@ -2,7 +2,7 @@
   <%= javascript_include_tag "http://maps.googleapis.com/maps/api/js?key=#{@apikey}&libraries=geometry&sensor=false" %>
 <% end %>
 
-<h1>Listing suppliers</h1>
+<h1>Suppliers</h1>
 
 <table>
   <thead>
@@ -16,23 +16,21 @@
       <th>Category</th>
       <th></th>
       <th></th>
-      <th></th>
     </tr>
   </thead>
 
   <tbody>
     <% @suppliers.each do |supplier| %>
       <tr>
-        <td><%= supplier.name %></td>
+        <td><%= link_to supplier.name, supplier %></td>
         <td><%= supplier.address %></td>
         <td><%= supplier.zip %></td>
         <td><%= supplier.country %></td>
-        <td><%= supplier.email %></td>
+        <td><%= mail_to supplier.email %></td>
         <td><%= supplier.phone %></td>
-        <td><%= supplier.category.name %></td>
-        <td><%= link_to 'Show', supplier %></td>
+        <td><%= supplier.category.name if supplier.category_id? %></td>
         <td><%= link_to 'Edit', edit_supplier_path(supplier) %></td>
-        <td><%= link_to 'Destroy', supplier, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Delete', supplier, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>

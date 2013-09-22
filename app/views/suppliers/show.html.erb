@@ -22,7 +22,7 @@
 
 <p>
   <strong>Email:</strong>
-  <%= @supplier.email %>
+  <%= mail_to @supplier.email %>
 </p>
 
 <p>
@@ -32,7 +32,7 @@
 
 <p>
   <strong>Category:</strong>
-  <%= @supplier.category.name %>
+  <%= @supplier.category.name if @supplier.category_id? %>
 </p>
 
 <%= link_to 'Edit', edit_supplier_path(@supplier) %> |
