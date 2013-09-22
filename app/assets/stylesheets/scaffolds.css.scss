@@ -104,6 +104,16 @@ div {
   height: 40px;
 } 
 
+#topbanner a {
+  color: #666;
+  &:visited {
+    color: #666;
+  }
+  &:hover {
+    color: #fff;
+  }
+}
+
 #milk {
   background-image: image-url("milk.png");
   width: 373px;
