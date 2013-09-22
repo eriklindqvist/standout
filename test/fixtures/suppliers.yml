@@ -7,13 +7,13 @@ one:
   country: Sweden
   email: kontakt@standout.se
   phone: 123
-  category: <%= Category.find_by_name 'Home' %>
+  category_id: 1
 
 two:
   name: 4 Krogar Vid Sjön
   address: Vattentorget 5
   zip: 352 34 Växjö
   country: Sweden
-  email: info@4krogar.se	
+  email: "info@4krogar.se"	
   phone: 123
-  category_id: <%= Category.find_by_name 'Milk' %>
+  category_id: 2
