@@ -1,19 +1,19 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
 one:
-  name: MyString
-  address: MyString
-  zip: MyString
-  country: MyString
-  email: MyString
-  phone: MyString
-  category_id: 
+  name: Home
+  address: Västergatan 6
+  zip: 352 30 Växjö
+  country: Sweden
+  email: kontakt@standout.se
+  phone: 123
+  category: <%= Category.find_by_name 'Home' %>
 
 two:
-  name: MyString
-  address: MyString
-  zip: MyString
-  country: MyString
-  email: MyString
-  phone: MyString
-  category_id: 
+  name: 4 Krogar Vid Sjön
+  address: Vattentorget 5
+  zip: 352 34 Växjö
+  country: Sweden
+  email: info@4krogar.se	
+  phone: 123
+  category_id: <%= Category.find_by_name 'Milk' %>
