@@ -11,7 +11,7 @@ add_marker = (location, title, content, map, icon) ->
   
 # Generera HTML-innehåll för inforutan
 create_info = (title = "", address = "", zip = "", country = "", email = "", phone = "") ->
-  '<div><h2>'+title+'</h2><p>'+address+'<br>'+zip+'<br>'+country+'<br>'+email+'<br>'+phone+'</p></div>'
+  '<div><h2>'+title+'</h2><p>'+address+'<br>'+zip+'<br>'+country+'<br><a href="mailto:'+email+'">'+email+'<br>'+phone+'</p></div>'
      
 # Skapa kartan
 init = ->  
