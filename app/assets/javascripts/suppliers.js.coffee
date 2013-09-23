@@ -33,13 +33,13 @@ init = ->
       address = val.address + ', ' + val.zip + ', ' + val.country
       
       # Hämta koordinater utifrån leverantörens adress 
-      $.getJSON 'https://maps.googleapis.com/maps/api/geocode/json?address='+address+'&sensor=false&language=sv', (json) ->
-        coordinates = json.results[0].geometry.location
-        location = new google.maps.LatLng coordinates.lat, coordinates.lng
+      geocoder = new google.maps.Geocoder()
+      geocoder.geocode address: address, (results, status) ->
+        location = results[0].geometry.location
         content = create_info val.name, val.address, val.zip, val.country, val.email, val.phone
         add_marker location, val.name, content, map, val.category.icon
         bounds.extend location
         map.fitBounds bounds
         map.panToBounds bounds
-    
+
 $ -> init()
