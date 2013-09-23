@@ -12,31 +12,25 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :name %><br>
+    <%= f.label :name %>
     <%= f.text_field :name %>
-  </div>
-  <div class="field">
-    <%= f.label :address %><br>
+    <br>
+    <%= f.label :address %>
     <%= f.text_field :address %>
-  </div>
-  <div class="field">
-    <%= f.label :zip %><br>
+    <br>
+    <%= f.label :zip %>
     <%= f.text_field :zip %>
-  </div>
-  <div class="field">
-    <%= f.label :country %><br>
+    <br>
+    <%= f.label :country %>
     <%= f.text_field :country %>
-  </div>
-  <div class="field">
-    <%= f.label :email %><br>
+    <br>
+    <%= f.label :email %>
     <%= f.text_field :email %>
-  </div>
-  <div class="field">
-    <%= f.label :phone %><br>
+    <br>
+    <%= f.label :phone %>
     <%= f.text_field :phone %>
-  </div>
-  <div class="field">
-    <%= f.label :category %><br>
+    <br>
+    <%= f.label :category %>
     <%= collection_select(:supplier, :category_id, Category.all, :id, :name) %>
   </div>
   <div class="actions">

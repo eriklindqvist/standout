@@ -156,3 +156,31 @@ thead {
 tr:hover td {
   background-color: #ccd;
 }
+
+.field {
+  width: 500px;
+  padding: 20px;
+}
+
+.field label {
+  font-weight: bold;
+  display: inline-block;
+  float: left;
+  clear: left;
+  width: 100px;
+  text-align: right;
+  margin: 8px 10px;
+}
+
+.field input, .field select {
+  border: 1px solid #999;
+  padding: 3px;
+  display: inline-block;
+  float: left;
+  margin: 5px 0px; 
+}
+
+.actions {
+  padding-top: 20px;
+  clear: both;
+}
