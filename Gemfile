@@ -48,3 +48,4 @@ end
 gem 'rails_12factor', group: :production
 gem 'pg'
 ruby "2.0.0"
+gem 'unicorn'
