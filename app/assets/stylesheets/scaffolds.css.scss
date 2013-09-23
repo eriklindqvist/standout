@@ -32,6 +32,15 @@ body {
   @include gradient(#135, #58A, 500px);
 }
 
+h1, h2, h3 {
+  text-shadow: 1px 1px #eef;
+  font-family: 'Asap', sans-serif;
+}
+
+h1 {
+  font-size: 36px;
+}
+
 p, ol, ul, td {
   font-family: verdana, arial, helvetica, sans-serif;
   font-size: 13px;
@@ -130,7 +139,8 @@ div {
   margin: 100px auto;
   width: 800px;
   padding: 20px;
-  background-color: #eee;
+  background-color: #cca;
+  @include gradient(#cca, #eed, 300px);
   border: 1px solid #334;
   @include shadow(0, 0, 30px, -5px, #000);
 }

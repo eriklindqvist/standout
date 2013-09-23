@@ -37,3 +37,29 @@
   font-weight: bold;
   margin: 0px 40px;
 }
+
+.start {
+  padding: 20px;
+  margin: 20px;
+  height: 320px;
+  color: #444;
+}
+
+.start .logo {
+  font-size: 84px;
+  font-family: 'Asap', sans-serif;
+  text-shadow: 1px 1px #fff;
+  width: 50%;
+  float: left;
+}
+
+.start .text {
+  font-size: 16px;
+  text-shadow: 1px 1px #eef;
+  width: 50%;
+}
+
+.start .bottle {
+  float: right;
+  margin: 0px 60px 100px 0px;
+}
