@@ -27,8 +27,8 @@ init = ->
   }
   map = new google.maps.Map @map, map_options
     
-  # Hämta lista över alla leverantörer i JSON
-  $.getJSON '/suppliers.json', (data) ->
+  # Hämta lista över leverantören eller alla leverantörer i JSON-format
+  $.getJSON $(location).attr('pathname')+'.json', (data) ->    
     $.each data, (key, val) ->
       address = val.address + ', ' + val.zip + ', ' + val.country
       
