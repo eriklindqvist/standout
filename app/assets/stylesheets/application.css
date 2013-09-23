@@ -41,7 +41,7 @@
 .start {
   padding: 20px;
   margin: 20px;
-  height: 320px;
+  min-height: 320px;
   color: #444;
 }
 
@@ -53,10 +53,22 @@
   float: left;
 }
 
-.start .text {
+.start .text, .start .text2 {
   font-size: 16px;
   text-shadow: 1px 1px #eef;
   width: 50%;
+}
+
+.start .text2 {
+  width: 100%;
+}
+
+.start .text2 a {
+  color: #67a;
+}
+.start .text2 a:hover {
+  color: #59f;
+  background-color: inherit;
 }
 
 .start .bottle {

@@ -33,7 +33,6 @@ init = ->
       address = val.address + ', ' + val.zip + ', ' + val.country
       
       # Hämta koordinater utifrån leverantörens adress 
-      # TODO: Felhantering
       $.getJSON 'https://maps.googleapis.com/maps/api/geocode/json?address='+address+'&sensor=false&language=sv', (json) ->
         coordinates = json.results[0].geometry.location
         location = new google.maps.LatLng coordinates.lat, coordinates.lng
