@@ -30,8 +30,8 @@
     <%= f.label :phone %>
     <%= f.text_field :phone %>
     <br>
-    <%= f.label :category %>
-    <%= collection_select(:supplier, :category_id, Category.all, :id, :name) %>
+    <%= f.label :categories %>
+    <%= collection_select(:supplier, :category_ids, Category.all, :id, :name, {:selected => @supplier.category_ids}, {:multiple => true}) %>
   </div>
   <div class="actions">
     <%= f.submit %>

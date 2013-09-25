@@ -13,7 +13,7 @@
       <th>Country</th>
       <th>Email</th>
       <th>Phone</th>
-      <th>Category</th>
+      <th>Categories</th>
       <th></th>
       <th></th>
     </tr>
@@ -28,7 +28,7 @@
         <td><%= supplier.country %></td>
         <td><%= mail_to supplier.email %></td>
         <td><%= supplier.phone %></td>
-        <td><%= supplier.category.name if supplier.category_id? and supplier.category != nil %></td>
+        <td><%= supplier.categories.map {|category| category.name}.join(', ') %></td>
         <td><%= link_to 'Edit', edit_supplier_path(supplier) %></td>
         <td><%= link_to 'Delete', supplier, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>

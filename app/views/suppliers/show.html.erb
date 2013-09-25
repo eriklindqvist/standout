@@ -15,13 +15,13 @@
 </p>
 
 <p>
-  <%= mail_to @supplier.email %>
+  <%= mail_to @supplier.email %><br>
   <%= @supplier.phone %>
 </p>
 
 <p>
-  <strong>Category:</strong>
-  <%= @supplier.category.name if @supplier.category_id? and @supplier.category != nil %>
+  <strong>Categories:</strong>
+  <%= @supplier.categories.map {|category| category.name}.join(', ') %>
 </p>
 
 <%= link_to 'Edit', edit_supplier_path(@supplier) %> |

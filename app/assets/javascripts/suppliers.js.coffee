@@ -31,13 +31,15 @@ init = ->
   $.getJSON $(location).attr('pathname')+'.json', (data) ->    
     $.each data, (key, val) ->
       address = val.address + ', ' + val.zip + ', ' + val.country
+      if val.categories.length > 0
+        icon = val.categories[0].icon
       
       # Hämta koordinater utifrån leverantörens adress 
       geocoder = new google.maps.Geocoder()
       geocoder.geocode address: address, (results, status) ->
         location = results[0].geometry.location
         content = create_info val.name, val.address, val.zip, val.country, val.email, val.phone
-        add_marker location, val.name, content, map, val.category.icon
+        add_marker location, val.name, content, map, icon
         bounds.extend location
         map.fitBounds bounds
         map.panToBounds bounds

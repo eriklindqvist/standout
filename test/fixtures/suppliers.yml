@@ -7,7 +7,7 @@ one:
   country: Sweden
   email: kontakt@standout.se
   phone: 123
-  category_id: 1
+  categories: one
 
 two:
   name: 4 Krogar Vid Sjön
@@ -16,4 +16,4 @@ two:
   country: Sweden
   email: "info@4krogar.se"	
   phone: 123
-  category_id: 2
+  categories: two
