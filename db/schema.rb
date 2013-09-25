@@ -11,13 +11,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130922115041) do
+ActiveRecord::Schema.define(version: 20130925085443) do
 
   create_table "categories", force: true do |t|
     t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "icon"
+  end
+
+  create_table "categories_suppliers", force: true do |t|
+    t.integer "supplier_id"
+    t.integer "category_id"
   end
 
   create_table "suppliers", force: true do |t|
@@ -27,11 +32,8 @@ ActiveRecord::Schema.define(version: 20130922115041) do
     t.string   "country"
     t.string   "email"
     t.string   "phone"
-    t.integer  "category_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
-
-  add_index "suppliers", ["category_id"], name: "index_suppliers_on_category_id"
 
 end
