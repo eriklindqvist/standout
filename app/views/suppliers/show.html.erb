@@ -21,7 +21,7 @@
 
 <p>
   <strong>Category:</strong>
-  <%= @supplier.category.name if @supplier.category_id? %>
+  <%= @supplier.category.name if @supplier.category_id? and @supplier.category != nil %>
 </p>
 
 <%= link_to 'Edit', edit_supplier_path(@supplier) %> |
